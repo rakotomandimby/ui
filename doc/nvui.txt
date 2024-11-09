@@ -107,7 +107,7 @@ In your plugins file
     end,
  },
 
- "nvchad/volt", -- optional, needed for theme switcher
+ "nvzone/volt", -- optional, needed for theme switcher
 <
 Base46 setup
 >lua
