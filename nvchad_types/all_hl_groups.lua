@@ -546,6 +546,12 @@ error("Requiring a meta file")
 ---@field BufferLineBufferSelected Base46HLGroups # highlight group for bufferline
 ---@field BufferLineBackground Base46HLGroups # highlight group for bufferline
 ---@field Boolean Base46HLGroups # highlight group for syntax
+---@field AvanteTitle Base46HLGroups # highlight group for avante
+---@field AvanteThirdTitle Base46HLGroups # highlight group for avante
+---@field AvanteSubtitle Base46HLGroups # highlight group for avante
+---@field AvanteReversedTitle Base46HLGroups # highlight group for avante
+---@field AvanteReversedThirdTitle Base46HLGroups # highlight group for avante
+---@field AvanteReversedSubtitle Base46HLGroups # highlight group for avante
 ---@field AlphaHeader Base46HLGroups # highlight group for alpha
 ---@field AlphaButtons Base46HLGroups # highlight group for alpha
 ---@field Added Base46HLGroups # highlight group for defaults
@@ -1159,6 +1165,12 @@ error("Requiring a meta file")
 ---@field BufferLineBufferSelected Base46HLGroups # highlight group for bufferline
 ---@field BufferLineBackground Base46HLGroups # highlight group for bufferline
 ---@field Boolean Base46HLGroups # highlight group for syntax
+---@field AvanteTitle Base46HLGroups # highlight group for avante
+---@field AvanteThirdTitle Base46HLGroups # highlight group for avante
+---@field AvanteSubtitle Base46HLGroups # highlight group for avante
+---@field AvanteReversedTitle Base46HLGroups # highlight group for avante
+---@field AvanteReversedThirdTitle Base46HLGroups # highlight group for avante
+---@field AvanteReversedSubtitle Base46HLGroups # highlight group for avante
 ---@field AlphaHeader Base46HLGroups # highlight group for alpha
 ---@field AlphaButtons Base46HLGroups # highlight group for alpha
 ---@field Added Base46HLGroups # highlight group for defaults
@@ -1269,6 +1281,7 @@ error("Requiring a meta file")
 
 ---@alias Base46Integrations
 ---| "'alpha'"
+---| "'avante'"
 ---| "'blankline'"
 ---| "'bufferline'"
 ---| "'cmp'"
