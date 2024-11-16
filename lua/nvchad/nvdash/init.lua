@@ -105,7 +105,7 @@ M.open = function(buf, win, action)
   local empty_str = {}
 
   for i = 1, winh do
-    empty_str[i] = string.rep(" ", winw)
+    empty_str[i] = string.rep("", winw)
   end
 
   -- set text + highlight
@@ -115,8 +115,8 @@ M.open = function(buf, win, action)
   for i, v in ipairs(dashboard) do
     v.txt = "  " .. v.txt .. "  "
     v.hl = v.hl or "NvDashButtons"
-    local opt = { virt_text_pos = "overlay", virt_text = { { v.txt, v.hl } } }
-    api.nvim_buf_set_extmark(buf, ns, row_i + i, col_i, opt)
+    local opt = { virt_text_win_col = col_i, virt_text = { { v.txt, v.hl } } }
+    api.nvim_buf_set_extmark(buf, ns, row_i + i, 0, opt)
 
     if v.cmd then
       table.insert(key_lines, { i = row_i + i + 1, cmd = v.cmd })
