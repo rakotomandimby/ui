@@ -90,8 +90,8 @@ M.tabs = function()
       result = result .. btn(" " .. nr .. " ", tab_hl, "GotoTab", nr)
     end
 
-    local new_tabtn = btn("  ", "TabNewBtn", "NewTab")
-    local tabstoggleBtn = btn(" 󰅂 ", "TabTitle", "ToggleTabs")
+    local new_tabtn = btn(" 󰐕 ", "TabNewBtn", "NewTab")
+    local tabstoggleBtn = btn(" TABS ", "TabTitle", "ToggleTabs")
     local small_btn = btn(" 󰅁 ", "TabTitle", "ToggleTabs")
 
     return g.TbTabsToggled == 1 and small_btn or new_tabtn .. tabstoggleBtn .. result
