@@ -556,6 +556,12 @@ error("Requiring a meta file")
 ---@field AlphaButtons Base46HLGroups # highlight group for alpha
 ---@field Added Base46HLGroups # highlight group for defaults
 ---@field ["'@regexp'"] Base46HLGroups # highlight group for semantic_tokens
+---@field ["'@org.headline.level6.org'"] Base46HLGroups # highlight group for orgmode
+---@field ["'@org.headline.level5.org'"] Base46HLGroups # highlight group for orgmode
+---@field ["'@org.headline.level4.org'"] Base46HLGroups # highlight group for orgmode
+---@field ["'@org.headline.level3.org'"] Base46HLGroups # highlight group for orgmode
+---@field ["'@org.headline.level2.org'"] Base46HLGroups # highlight group for orgmode
+---@field ["'@org.headline.level1.org'"] Base46HLGroups # highlight group for orgmode
 ---@field ["'@modifier'"] Base46HLGroups # highlight group for semantic_tokens
 ---@field ["'@markup.heading.6.markdown'"] Base46HLGroups # highlight group for markview
 ---@field ["'@markup.heading.5.markdown'"] Base46HLGroups # highlight group for markview
@@ -1196,6 +1202,12 @@ error("Requiring a meta file")
 ---@field ["'@punctuation.delimiter'"] Base46HLGroups # highlight group for treesitter
 ---@field ["'@punctuation.bracket'"] Base46HLGroups # highlight group for treesitter
 ---@field ["'@property'"] Base46HLGroups # highlight group for treesitter
+---@field ["'@org.headline.level6.org'"] Base46HLGroups # highlight group for orgmode
+---@field ["'@org.headline.level5.org'"] Base46HLGroups # highlight group for orgmode
+---@field ["'@org.headline.level4.org'"] Base46HLGroups # highlight group for orgmode
+---@field ["'@org.headline.level3.org'"] Base46HLGroups # highlight group for orgmode
+---@field ["'@org.headline.level2.org'"] Base46HLGroups # highlight group for orgmode
+---@field ["'@org.headline.level1.org'"] Base46HLGroups # highlight group for orgmode
 ---@field ["'@operator'"] Base46HLGroups # highlight group for treesitter
 ---@field ["'@number.float'"] Base46HLGroups # highlight group for treesitter
 ---@field ["'@number'"] Base46HLGroups # highlight group for treesitter
@@ -1302,6 +1314,7 @@ error("Requiring a meta file")
 ---| "'nvcheatsheet'"
 ---| "'nvimtree'"
 ---| "'nvshades'"
+---| "'orgmode'"
 ---| "'rainbowdelimiters'"
 ---| "'semantic_tokens'"
 ---| "'statusline'"
