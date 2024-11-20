@@ -353,6 +353,8 @@ error("Requiring a meta file")
 ---@field HopNextKey2 Base46HLGroups # highlight group for hop
 ---@field HopNextKey1 Base46HLGroups # highlight group for hop
 ---@field HopNextKey Base46HLGroups # highlight group for hop
+---@field GitConflictDiffText Base46HLGroups # highlight group for git-conflict
+---@field GitConflictDiffAdd Base46HLGroups # highlight group for git-conflict
 ---@field Function Base46HLGroups # highlight group for syntax
 ---@field Folded Base46HLGroups # highlight group for defaults
 ---@field FoldColumn Base46HLGroups # highlight group for defaults
@@ -978,6 +980,8 @@ error("Requiring a meta file")
 ---@field HopNextKey2 Base46HLGroups # highlight group for hop
 ---@field HopNextKey1 Base46HLGroups # highlight group for hop
 ---@field HopNextKey Base46HLGroups # highlight group for hop
+---@field GitConflictDiffText Base46HLGroups # highlight group for git-conflict
+---@field GitConflictDiffAdd Base46HLGroups # highlight group for git-conflict
 ---@field Function Base46HLGroups # highlight group for syntax
 ---@field Folded Base46HLGroups # highlight group for defaults
 ---@field FoldColumn Base46HLGroups # highlight group for defaults
@@ -1302,6 +1306,7 @@ error("Requiring a meta file")
 ---| "'defaults'"
 ---| "'devicons'"
 ---| "'diffview'"
+---| "'git-conflict'"
 ---| "'git'"
 ---| "'hop'"
 ---| "'lsp'"
