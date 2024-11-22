@@ -318,6 +318,9 @@ error("Requiring a meta file")
 ---@field LspReferenceRead Base46HLGroups # highlight group for lsp
 ---@field LspInlayHint Base46HLGroups # highlight group for lsp
 ---@field LineNr Base46HLGroups # highlight group for defaults
+---@field LeapMatch Base46HLGroups # highlight group for leap
+---@field LeapLabel Base46HLGroups # highlight group for leap
+---@field LeapBackdrop Base46HLGroups # highlight group for leap
 ---@field LazyValue Base46HLGroups # highlight group for defaults
 ---@field LazyUrl Base46HLGroups # highlight group for defaults
 ---@field LazyTaskOutput Base46HLGroups # highlight group for defaults
@@ -945,6 +948,9 @@ error("Requiring a meta file")
 ---@field LspReferenceRead Base46HLGroups # highlight group for lsp
 ---@field LspInlayHint Base46HLGroups # highlight group for lsp
 ---@field LineNr Base46HLGroups # highlight group for defaults
+---@field LeapMatch Base46HLGroups # highlight group for leap
+---@field LeapLabel Base46HLGroups # highlight group for leap
+---@field LeapBackdrop Base46HLGroups # highlight group for leap
 ---@field LazyValue Base46HLGroups # highlight group for defaults
 ---@field LazyUrl Base46HLGroups # highlight group for defaults
 ---@field LazyTaskOutput Base46HLGroups # highlight group for defaults
@@ -1309,6 +1315,7 @@ error("Requiring a meta file")
 ---| "'git-conflict'"
 ---| "'git'"
 ---| "'hop'"
+---| "'leap'"
 ---| "'lsp'"
 ---| "'lspsaga'"
 ---| "'markview'"
