@@ -123,6 +123,8 @@ Base46 setup
 
 These are the default options for UI/Base46 plugin. No need to write them all 
 Only those you want to change and the it'll override the defaults.
+
+nvconfig file : |https://github.com/NvChad/ui/blob/v3.0/lua/nvconfig.lua|
 >lua
  {
    base46 = {
