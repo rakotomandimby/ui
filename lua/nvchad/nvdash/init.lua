@@ -124,6 +124,7 @@ M.open = function(buf, win, action)
   end
 
   ------------------------------------ keybinds ------------------------------------------
+  vim.wo[win].virtualedit = "all"
   local btn_start_i = row_i + #header + 2
   api.nvim_win_set_cursor(win, { btn_start_i, col_i + 5 })
 
