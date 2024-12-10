@@ -12,12 +12,15 @@ return function()
   api.nvim_set_current_win(win)
 
   api.nvim_buf_set_lines(buf, 0, -1, true, { " " .. var })
+
+  vim.bo[buf].buftype = "prompt"
+  vim.fn.prompt_setprompt(buf, "")
   vim.api.nvim_input "A"
 
   vim.keymap.set({ "i", "n" }, "<Esc>", "<cmd>q<CR>", { buffer = buf })
 
-  vim.keymap.set("i", "<CR>", function()
-    local newName = vim.trim(api.nvim_get_current_line())
+  vim.fn.prompt_setcallback(buf, function(text)
+    local newName = vim.trim(text)
     api.nvim_win_close(win, true)
 
     if #newName > 0 and newName ~= var then
@@ -25,7 +28,5 @@ return function()
       params.newName = newName
       vim.lsp.buf_request(0, "textDocument/rename", params)
     end
-
-    vim.cmd.stopinsert()
-  end, { buffer = buf })
+  end)
 end
