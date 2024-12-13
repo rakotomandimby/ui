@@ -49,13 +49,6 @@ M.open = function(buf, win, action)
     end
   end
 
-  if #opts.buttons[1] == 3 then
-    vim.schedule(function()
-      vim.notify "nvdash buttons: each item must have a txt, and cmd"
-    end)
-    return
-  end
-
   for _, val in ipairs(opts.buttons) do
     local str = type(val.txt) == "string" and val.txt or val.txt()
     str = val.keys and str .. val.keys or str
@@ -150,7 +143,7 @@ M.open = function(buf, win, action)
     end
   end, buf)
 
-  require("nvchad.utils").set_cleanbuf_opts("nvdash", buf)
+  require("nvchad.utils").set_cleanbuf_opts("nvdash", buf, win)
 
   if action == "redraw" then
     return
