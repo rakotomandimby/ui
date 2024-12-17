@@ -24,7 +24,7 @@
 ---@field hl_add? HLTable
 --- List of highlight groups that is part of base46 default integration that you want to change
 --- ```lua
----     hl_overrde = {
+---     hl_override = {
 ---       ["HLName"] = {fg = "red"},
 ---     }
 --- ```
@@ -66,7 +66,7 @@
 --- nvim-cmp style
 ---@field style? '"default"'|'"flat_light"'|'"flat_dark"'|'"atom"'|'"atom_colored"'
 --- Only has effects when the style is `default`
---- @field icons_left? boolean 
+--- @field icons_left? boolean
 --- places lspkind icons to the left, only for non-atom styles
 --- @field format_colors? NvCmpFormatColors
 
