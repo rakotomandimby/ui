@@ -80,15 +80,34 @@ M.modes = {
   ["!"] = { "SHELL", "Terminal" },
 }
 
--- credits to ii14 for str:match func
+
 M.file = function()
   local icon = "󰈚"
+  local name = ""
   local path = vim.api.nvim_buf_get_name(M.stbufnr())
-  local name = (path == "" and "Empty ") or path:match "([^/\\]+)[/\\]*$"
+  local config = require("nvconfig").ui.statusline.filename
+
+  -- Configuration handling with a lookup table
+  local config_handlers = {
+    just_filename = function(path)
+      return (path == "" and "Empty ") or path:match "([^/\\]+)[/\\]*$"
+    end,
+    relative_path = function()
+      return vim.fn.fnamemodify(vim.api.nvim_buf_get_name(M.stbufnr()), ":.")
+    end,
+    full_path = function(path)
+      return path
+    end,
+  }
+
+  -- Default to "just_filename" if config is invalid
+  config = config_handlers[config] and config or "just_filename"
+
+  -- Get the name based on the config
+  name = config_handlers[config](path)
 
   if name ~= "Empty " then
     local devicons_present, devicons = pcall(require, "nvim-web-devicons")
-
     if devicons_present then
       local ft_icon = devicons.get_icon(name)
       icon = (ft_icon ~= nil and ft_icon) or icon
@@ -97,6 +116,7 @@ M.file = function()
 
   return { icon, name }
 end
+
 
 M.git = function()
   if not vim.b[M.stbufnr()].gitsigns_head or vim.b[M.stbufnr()].gitsigns_git_status then
